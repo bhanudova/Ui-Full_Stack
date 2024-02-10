@@ -1,0 +1,75 @@
+FAQ: What Is HTML Role?
+Ans: Html plays a crucial role in web development. 
+     It's primary role is "Presentation"
+
+FAQ: What Is CSS Role?
+Ans: Make Presentation more interactive and responsive
+
+FAQ: What Is Bootstrap Role?
+Ans: Templates Library For Web development
+
+JavaScript: Client Side Interactions
+jQuery: Interactions Responsive Using Ajax
+
+
+FAQ: What Is The Difference Between Local & Cloud Server?
+Ans: 1.Local server means we check the applications in local
+     Local Servers
+     -------------
+     IIS(Internet Information Services): 
+      *IIS is a local web server 
+
+     Tomcat
+     ------
+      *Tomcat is also local web server
+
+
+      2.Cloud server means when applications works fine in local then we deployed into "Cloud Server"
+        Once your applications is cloud server it is live everyone can use it
+        [Firebase,AWS,Azure etc..] These are the cloud server.
+
+
+
+
+
+
+FAQ: Why NodeJs Is Mandatory For UI Project/FrontEnd Projects ?
+Ans: *NodeJs can provide package manager "NPM" 
+     *Package Manager is used to "Install, Update, Uninstall Various Library's"
+
+Other PackageManager Name:
+--------------------------
+*Yarn
+*Bower
+*Grunt
+*NuGet
+*RubyGems
+*Composer etc..
+
+Node Version To Check:
+> node -v
+> npm -v
+
+
+
+
+
+FAQ: What Is 'package.json' ?
+Ans: 1.Package.json comprises of project meta data
+     2.It contains the information about project 
+        *project names[library,frameworks,plugs] 
+        *version details etc...
+    
+
+
+
+FAQ: What Is Difference Between "public" & "src" folder?
+Ans: "public" : it is used to keep static resources like [html, images, docs etc.. files]
+     "src"    : it is used to keep dynamics resources like [css, scss, js, ts etc.. file]
+    
+
+    
+     
+     
+
+     
