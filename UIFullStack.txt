@@ -1,0 +1,240 @@
+				UI FullStack
+		====================================
+
+FAQ: What is Html Role
+Ans: Presantation Language
+
+FAQ: What is CSS Role
+Ans: Make Presentation more interactive and responsive
+
+FAQ: What is Bootstrap Role
+Ans: Template Library for web designing
+
+
+JavaScript: Client Side Intractions
+jQUery    : Intractions Responsive using Ajax
+
+
+
+
+-Web Applications
+-Web Server
+	a)Local
+		IIS, Tomcat
+	b)Cloud	
+		Firebase, AWS, Azure..
+
+
+FAQ: What is Diffrence Between Local & Cloud Server?
+Ans: Local Server Means We Check The Application Local 
+     Cloud Server Means When Application Working Local Server Is Fine Then We Deploed into Cloud Server
+     Once Your Application is Cloud Server it is live everyone can use it
+
+
+
+Setup Environment for Building Web Applicatiton
+1. Download and install "Node Js"' on Your PC
+	-Node Js is required to handel server side
+	-Node JS provides a "Package Manager" software 
+	-Package Manger is used by developer to isntall, update and uninstall various librarys
+	-The node package manaer is "NPM"
+
+Package Mangers
+---------------
+-NPM
+-Yarn
+-Bower
+-Grunt
+-NuGet
+-RubyGems
+-Composer  etc...
+
+
+
+Node Version Check > node -v
+Package Version 	>  npm -v
+
+
+
+
+2.Download and install Visual Studio Code Editor
+	-Editor provides an IDE [Intergrated Development Environment]
+	-You can build, debug, test and deploy application from one place.
+
+
+	
+3.Open Visual Studio Code in your PC and isntall few extentions
+	-Live Server
+	-vscode-icons
+	-intelliSense of CSS class name in HTML
+
+
+
+Create a new Project for Web Applications
+	1.Create a new floder on your PC for project
+	2.D:\ UI_FullStack
+	3.Open your project floder in Terminal [Command Prompt]
+	
+	D:\UI_FullStack
+	>npm init -y		
+*This command generates a new file called 'package.json'
+*package.json comprises of project meta data
+*it contians inforamation aboutt project
+	name
+	version
+	license
+	author
+	dependencies etc..
+
+
+5. Add flollowing floder into project
+		a)public :it is used to keep static resources[html,image,docs..]
+		b)src	:it is used for dynamic resources[css,scss,js,ts..]
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+To Start Project
+-Click "Go Live" Button in status bar
+-Open any browser : chrome,edge,safari..
+
+	http://127.0.0.1:5500
+		(or)
+	http://localhsot:5500
+
+
+			Web Page
+		=====================
+-it is a hyper text document that provides an UI from where user can interact
+ with resources in website
+
+-The term "Hyper" means beyond.
+
+-A Hyper text document contains information and takes your beyond what they see.
+
+-Hyper text document that providse UI for website are known as "Web Pages"
+
+
+-Web Pages are Classfied into 2 types
+	1.Static Pages
+	2.Dynamic Pages
+
+
+-Static Page have same information to display for every request. They have extenstion
+	.html, .htm
+
+-Dynamic page can handle the request from client and creates a customized response
+ fro every request.
+	.aspx, asp, jsp, php etc..
+
+
+-HTml is a language used to design both static and dynamic pages.
+-Every website starts with a statc page called "index.html"
+
+
+
+				HTML
+			=============
+-Hyper Text Markup Language
+-Myper means "beyond"
+-Hyper Text is the text that take the user beyond what they see on screen
+-Markup Language is a language used for presentation
+-Marking up is the process of preparing our content for presentation
+-Html is use to present on browser
+
+
+
+
+				Browser Architecture
+			===============================
+1.UI				:it refers to browser interface that contains
+			     	 [title bar, buttons, address, workspace, plugins etc..]
+	
+2.Browser Engine		:it is responsible for translating HTML,CSS,JavaScript..
+				 V8, Chakra, Geckok, Spider, Monkey, Chromium etc..
+
+3.Rendering Engine	:it is responsible for rendering output into browser.
+
+4.Networking		:it is responsible to monitoring the page which is loaded into browser
+
+5.JS Interpreter		:it is JavaScript line by line translator.
+
+6.UI backend		:it refers to extentions and plugins that work for browser
+                         in backend.
+
+7.Data Persistance	:it data storage for browser
+				  Local Storage
+				  Cookies
+				  Session
+				  Applicatoin
+
+
+
+HTML Translation in Browser
+===========================
+
+
+
+Start the 5th Video
+
+
+
+
+
+
+
