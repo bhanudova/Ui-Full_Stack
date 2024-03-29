@@ -121,6 +121,184 @@ Create a new Project for Web Applications
 
 
 
+Layout: It will tell where which one is come,
+        A layout finalize the which information to present ,
+		
+
+Rendering: Rendering Is The Processing called prepared output (final output created)
+
+Painting: After rendering Result of output is painting.
+
+
+HTML: contains collection of elements 
+
+
+
+
+FAQ: What is Html Parsing in browser?
+Ans:
+	1.Developer writes Markup
+		<b> world </b>
+	2.it is translated into bytes
+		010101010
+	3.Bytes are parsed into characters
+	4.Character under go a process called "Tokenization" and creates tokens, which are also known as "Tags"
+			<b> Bold Tags
+	5.Tokens are converted into Elements, which are known as "Nodes"
+		<b> bold elements
+		<a> anchor elements
+		<p> paragraph elements
+	6. Elements are arranged in a hierarchial order called "DOM" document object model 
+	7. DOM is processed into Layout using Rendering engine
+	8. DOM is painted in browser.
+
+
+Summary: HTML Present DOM,
+		 DOM which a hierarchial order of elements
+		 HTML is a collections of elements.
+		 
+
+
+		 					HTML Elements
+						===================
+-HTML elements are classified into 5 Groups 
+	1.Normal Elements
+	2.Void Elements
+	3.RC Data Elements 
+	4.Raw Text Elements
+	5.Foreign Elements
+
+-Normal Elements returns a presentation directly on callback
+ They Doesn't Require additional attribute
+ They Start presenting but will not stop presenting.
+ Hence you have to manually stop by using End Token[tag]
+ These elements require 2 tokens 
+	a)Start Token 	<b>
+	b)End Token		</b>
+
+
+
+-Void Elements
+	void refers to no return value.
+	Void element will not return any presentation directly on callback
+	it requires attributes that defines what to return
+	it returns the specific content and stops implicitly
+	Hence these elements doesn't require End Token
+
+Ex:	<img>
+
+
+
+-RC Data elements are Rich Text Content Elements
+ They are used only for rich text and will ont allow any another element with in context.
+
+ <textarea>
+    Welcome to <b>HTML</b> //this is RC data this will not allow any other element inside
+</textarea>
+
+<p>
+    Welcome to <b>HTML</b>		//this not RC data 
+</p>
+
+
+
+
+-Raw Text element are present using raw text chars without any token.
+Ex: &copy; 
+	&#8377;
+	&laquo
+	Offer Price &#8377; 45,0000.56 /- &copy; copyright 2024  &laquo;
+
+
+
+
+	
+-Foreign Elements are presented by using an additional library, They are part of HTML but will not work directly in HTML.
+ Ex: Canvas, SVG, MathML etc..
+
+
+
+ FAQ: What are semantic Elements in HTML?
+ Ans: The term semantic refers to  a specific purpose. HTML have lot of semantics
+		<b> <h1> <p> <head> <body> etc.. // These are semantic
+		 
+
+
+
+							HTML Page Structure
+						==========================
+1.Every static page can have extension
+	.html	
+	.htm
+
+2.Every page start with document declaration from HTML 5 version.
+
+	<!DOCTYPE html>		//Version Of HTML 5
+	<!doctype type>		// this one works capitalization doesn't matter, you can use capital or small 
+
+	<>	Token
+	<!>	Not Token 		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -221,7 +399,7 @@ To Start Project
 				  Local Storage
 				  Cookies
 				  Session
-				  Applicatoin
+				  Application
 
 
 
@@ -230,7 +408,107 @@ HTML Translation in Browser
 
 
 
-Start the 5th Video
+FAQ: What is purpose of html <!DOCTYPE html> Declaration?
+Ans: <!DOCTYPE html> declaration indicates which type of html version(5) we are using.
+	 *<!DOCTYPE html> it is tell to the browser we are using html5 version.
+
+
+
+HTML Structure
+==============
+1. Extension  
+	.htm
+	.html
+
+2.Document Declaration
+	<DOCTYPE html>
+
+3. Document Scope
+	 <html> </html>
+	 *document scope specifies where the document start where it ends.
+	 *Every Html document scope must define the content language type
+	 	
+		<html lang="en-in">			//india
+		</html>
+
+		<html lang="en-us">			//usa
+		</html>		
+	
+
+
+IMP: Browser Engine use Lexical scope technique
+	  -it is bottom to top approach.
+	  -Developers can write codes outsides Html scope, which can perform better but have
+	   abnormal behavior.
+
+
+
+
+4.Every document comprises of 2 sections
+		a)head	<head></head>
+		b)body  <body></body>
+
+		a)Head section comprises of content, which is intended to load browser memory
+		  and then delivered to browser
+		b)Body section comprises of content, which is intended to load into browser directly
+
+ 
+
+
+
+5.Head Section of HTML
+	-HTMl head section typically comprises of following elements
+		a)title
+		b)link
+		c)meta
+		d)style
+		e)script 	=> th
+
+
+		title
+	============
+*it contains information, which is displayed in the title or browser
+*it is used by title bar favorites
+*it is also used in SEO[Search Engine Optimization]
+
+Syntax:
+-------
+	<!DOCTYPE html>
+	<html lang="en-in">
+		<head>
+			FlipCart Online Shopping
+		</head>
+	</html>
+
+
+
+	link
+===========
+*it is used to link any external document to your webpage
+*it links
+	a)Favicon (16x16 and 32x32 favicon size)
+	b)Stylesheets
+
+Ex: Creating a favicon for our website
+		1)create a one file 'favicon.ico' in images folder
+		2)Right click on the file => Revel in explorer
+		3)Right click n icon file => open "MS Paint"
+		4)CTRL+E [File Property] of MSPaint and set size "32x32 pixels"
+		5)Draw you icon and Save [CTRL+S]
+		6)Go to your index.html page and link favicon
+
+		<head>
+			<link rel="shortcut icon" href="public/images/favicon.ico"/>
+		</head>
+
+
+meta
+====
+-meta refers to "meat data"
+-meta data for website is require to make the page SEO friendly and Responsive
+
+Syntax: Responsive
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 
@@ -238,3 +516,797 @@ Start the 5th Video
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8th video started
+=================
+
+	Meta
+============
+-Meta refers to "Meta Data"
+-It Comprises of information about your page
+-It is required to make the page more responsive and SEO friendly.
+
+Meta Responsive
+---------------
+<meat name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="refresh" content="5"/> //it will refresh your entire page at every 5 seconds
+
+Meta SEO Friendly
+-----------------
+<meat name="keywords" content="some keywords used for searching your website">
+<meta name="description" content="some description about your website"> // *What services your website provides, *What facilities your website provides etc..
+<meta charset="utf-8">
+		UTF = Unicode Transformation Format
+		8	= 8bit [memory] English -US,UK,IN etc..
+		16  = 16bit 		Korea, China, German, etc..
+		32  = 32bit			Arabic
+
+
+	script
+===============
+-it is used to embed JavaScript into Page.
+	<script>
+		..your logic..
+	</script>
+
+-it is used to embed CSS into page
+		<style>
+			..your styles..
+		</style>
+
+Summary:
+--------
+*title
+*link
+*meta
+*style
+*script
+
+FAQ: What is Responsive?
+Ans: The page is going to adjust itself according to device
+
+
+FAQ: What is the Difference Between 'Head and Body'
+Ans: *The Content in Head Section Are First Loaded into the Browser memory, 
+	 *Content in body section are delivered into the browser page
+
+
+	 			HTML Body Section
+			=======================
+-the content in body section are displayed in browser workspace
+-the body section is defined by using <body> element
+-body element have following attributes
+
+	attributes							description
+	----------							-----------
+	bgcolor								it sets a background color for body
+	text								it sets a color for text in body
+
+Note: Html colors are defined in 2 ways
+		a)Color Names	|  Color Shade Name
+		b)Hexa Decimal code
+
+	<body bgcolor="red">	//Color Name
+	<body bgcolor="tomato">	//Shade Name
+
+	<body bgcolor="green">	//color Name
+	<body bgcolor="lime">	//Shade Name
+
+	Hexa Decimal Color:
+	-------------------
+	-3 char code with "#"
+	-6 char code with "#"
+	-Color Combination will be "RGB" [Red,Green,Blue]
+			#RGB
+			#RRGGBB
+	-Every color range will  be from "0 to f" [0,1,2,3,4,5,6,7,8,8,a,b,c,d,e,f]
+		R = 0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f
+		    Dark						Bright
+
+		#0f0		//Green Color Will come
+		#f00		//Red Color Will Come
+
+*background it sets a background picture of body
+Note: Never use physical path of any resource in web designing. Always use virtual path
+		<body background="images/name.jpg">
+
+*align 		it aligns the body content, left, center,right,justify
+
+
+FAQ: What is web page Height and width
+Ans: Width 1200px Height 768px
+
+
+leftmargin	]
+rightmargin	] it sets the space Between the browser window and content in page
+topmargin	]
+bottommargin]
+
+Note: Every page default size is "1200px X 768px"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Color in HTML
+=============
+1.Color Name or Shade Name
+2.Hexa Decimal
+	#RGB, #RRGGBB [0 to f]
+
+	0 = Dark 
+	f = Bright
+
+
+8.alink			: it sets the color for active links
+9.vlink			: it sets color for visited links
+
+
+Syntax:
+-------
+	<body alink="red" vlink="gray">
+		<a href="http://www.amazon.in">Amazon India</a>
+	</body> 
+
+
+
+				HTML Body Semantic
+			========================
+FAQ: Can you tell some HTML Semantic elements[latest] Semantic?
+Ans: Semantic means it is a specific purpose
+     *Html have more then 100 Semantics  for presentation
+	 *HTML 5 introduced some new semantics to make the more SEO friendly
+1.header
+2.footer
+3.section
+4.main
+5.nav
+6.menu
+7.dialog		==============> these semantic a for designing a layout of page.
+8.figure
+9.figcaption
+10.aside
+11.artical
+12.div
+13.span  
+
+
+
+FAQ: What is Layout ?
+Ans: Layout tells that where which information will come
+
+Bootstrap Theme Example
+=======================
+Link: https://themes.getbootstrap.com/preview/?theme_id=37702
+
+
+Setup Icons For Projects
+========================
+-open terminal 
+	>npm install bootstrap-icons --save
+
+
+FAQ: What is Purpose for Node Module folder
+Ans: It contains projects library files [all the library are contained in node modules folder]
+
+-link bootstrap icons css file into webpage
+	<link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+5. you can set icons by using classNames
+
+		<span class="bi bi-heart"></span>
+    	<span class="bi bi-globe"></span>
+    	<span class="bi bi-person"></span>
+
+9TH VIDEO COMPLETED
+
+
+
+
+
+
+FAQ: What is the 'flex' 
+Ans: It will set the all blocks side by side
+
+
+
+path		./	Access files from current folder
+			../ Access files from previous level [one level back]
+			../../
+
+
+display:flex							:it will keep the content side by side
+justify-content: space-between 			:it will set space between the divisions.
+
+
+
+
+ 
+
+Example:
+========
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            font-family: Arial;
+            font-size: 20px;
+            background-color: white;
+            color: black;
+            padding: 20px;
+        }
+
+        .header-title {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        span {
+            margin-right: 20px;
+        }
+
+        article {
+            margin-top: 20px;
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+
+        .bi-lightning-fill {
+            color: goldenrod;
+        }
+
+        section {
+            height: 300px;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+            font-family: Arial;
+        }
+
+        .footer-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .title{
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .title~div{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <span class="header-title">Shopper.</span>
+        </div>
+        <div>
+            <nav>
+                <span>Home</span>
+                <span>Catalog</span>
+                <span>Shop</span>
+                <span>Pages</span>
+                <span>Blog</span>
+                <span>Docs</span>
+            </nav>
+        </div>
+        <div>
+            <span class="bi bi-search"></span>
+            <span class="bi bi-person"></span>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-cart"></span>
+        </div>
+    </header>
+    <article>
+        <span class="bi bi-lightning-fill"></span>
+        HAPPY HOLIDAY DEALS ON EVERYTHING
+        <span class="bi bi-lightning-fill"></span>
+    </article>
+    <section>
+
+    </section>
+    <footer>
+        <div>
+            <div class="footer-title">Shopper</div>
+            <div>
+                <span class="bi-facebook"></span>
+                <span class="bi-twitter"></span>
+                <span class="bi-instagram"></span>
+                <span class="bi-youtube"></span>
+            </div>
+        </div>
+        <div>
+            <div class="title">SUPPORT</div>
+            <div>Contact Us</div>
+            <div>FAQs</div>
+            <div>Size Guide</div>
+            <div>Shipping & Returns</div>
+        </div>
+        <div>
+            <div class="title">Shop</div>
+            <div>Men's Shopping</div>
+            <div>Women's Shopping</div>
+            <div>Kids' Shopping</div>
+            <div>Discounts</div>
+        </div>
+        <div>
+            <div class="title">COMPANY</div>
+            <div>Our Story</div>
+            <div>Careers</div>
+            <div>Terms & Conditions</div>
+            <div>Privacy & Cookie policy</div>
+        </div>
+        <div>
+            <div class="title">CONTACT</div>
+            <div>1-202-555-0105</div>
+            <div>1-202-555-0106</div>
+            <div> help@shopper.com</div>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Body Semantics
+==============
+-header
+-footer
+-section
+-main
+-nav
+-div
+-span
+-article
+
+
+
+
+
+			Aside
+		============
+*it represents content which is not relative to current page.
+*it mostly used for ads
+*it is used for navigation to the network of current page. [Social icons]
+
+*if any element removed it place then we have to apply "position:fixed || absolute" 
+	fixed and absolute removed the current position
+
+FAQ: What is fixed 
+Ans: you keep the container where you want and it will be fixed at that position 
+     if your scroll up and down it will not scroll along with page it will fix that position
+
+	=====> top right bottom left
+
+FAQ: What is absolute
+Ans: Where you place the content it can move up and down
+
+	=====> top right bottom left
+
+
+CSS styles
+==========
+a)position:absolute		:remove for specified location, but keeps along with content
+b)position:fixed		:removes from specified location, and keeps the position fixed
+						 [not with content, it is with page]
+
+
+Ex:
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aside</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        aside{
+            font-size: 25px;
+            color: cadetblue;
+            background-color: white;
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            width: fit-content;
+        }
+        aside div{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates earum, corporis repellat aliquid ducimus necessitatibus perferendis hic aut officiis quidem voluptatem voluptatibus quae dolor. Vero dolore vel quidem. Vel, nam est, labore optio quis repellendus temporibus voluptatem cum amet non ab, veniam voluptatibus minus quaerat ducimus blanditiis ea numquam minima in? Fuga et tempora autem, minima alias veritatis placeat sint sunt architecto exercitationem velit tempore molestiae reprehenderit veniam, odit dolorum harum beatae. Minima, itaque incidunt beatae illum quaerat commodi sequi consequatur quae corrupti praesentium quidem nemo excepturi aspernatur tempore laboriosam quisquam quis, quasi iusto officia saepe ducimus recusandae ipsum. Laudantium, quaerat dolorem. Odit praesentium tempore placeat asperiores, rem corporis expedita at ea omnis, fugit molestias ducimus atque amet quibusdam quae cupiditate dolore quidem nobis ratione, enim deleniti dolor? Exercitationem dolor quis doloribus tempore laborum tempora sed eum consectetur, similique molestiae assumenda? Veniam porro delectus iste aperiam corporis rerum sint natus, doloribus eos dolores blanditiis a voluptas nesciunt magnam beatae perferendis, doloremque nisi. Odio, delectus? Enim, harum adipisci? Mollitia nobis optio iusto consequatur voluptatem cupiditate voluptas sunt dolorem est, odit consectetur molestiae hic adipisci illo totam soluta fugit veritatis earum accusantium, maiores officiis esse quia doloribus! Facilis a animi nulla sed architecto ut voluptates atque voluptate, ducimus laudantium ipsum velit sunt incidunt eos quam dolore, eius explicabo ex tempore obcaecati porro laborum quidem qui fugiat! Ratione ab, molestiae debitis sit eveniet facere in quibusdam provident, voluptatem aliquam, quia alias. Pariatur aspernatur ducimus, amet eaque iure magni! Consectetur voluptatum sint ducimus architecto voluptatibus nemo cumque atque nulla recusandae tempore, facere et mollitia vero perspiciatis eum laudantium reprehenderit corrupti quisquam minus est porro? Expedita ea doloremque veritatis maxime officia atque exercitationem quo ad dignissimos natus numquam sunt nesciunt dolores, odio tenetur. Nam quia iure esse delectus fugiat dolorum provident sit, accusamus quam a, voluptatibus cumque laborum, explicabo asperiores accusantium earum deleniti officia? Sint atque dolorem molestias maiores error tenetur natus, suscipit quibusdam accusamus sunt. Culpa velit eius voluptatem alias laudantium, temporibus eos, corporis enim reprehenderit cum, sapiente quisquam nisi. Odit accusantium, nemo illo harum vero veritatis in est corporis natus quia optio. Sapiente nobis explicabo, sit consectetur itaque vel impedit sunt maiores officiis mollitia quibusdam vero, debitis, tenetur asperiores quasi odio voluptatum ratione dolores assumenda! Deserunt voluptate magnam molestiae nulla consequatur eligendi aperiam reprehenderit, temporibus adipisci itaque error quasi voluptates ipsam suscipit ut recusandae cupiditate, eius nihil consequuntur ipsum vero sequi illum voluptas hic? Nobis, ducimus ab beatae nulla nisi maxime ea fugit veniam quos excepturi animi nihil quae. Iste odit, cupiditate blanditiis vero corporis earum culpa distinctio magnam libero ad eius minima molestias perspiciatis, asperiores recusandae eveniet voluptatibus officia perferendis, laudantium quae dolores labore. Architecto excepturi alias incidunt ipsam perferendis obcaecati amet ratione illo, suscipit repellat quia tempore, dolore fuga, ipsum fugit id quibusdam mollitia iste! Ipsa corrupti optio qui sed laborum modi. Saepe corrupti cum dicta quaerat id provident dolor perferendis in officiis, deserunt ducimus quasi, eius recusandae? Perspiciatis earum facilis minus necessitatibus voluptas, in velit distinctio ut voluptatibus tempora nobis explicabo fugit pariatur placeat. Blanditiis dignissimos vitae sit expedita error magnam, praesentium illo at voluptates minus quam, a et id similique sequi cum quos numquam minima culpa animi deleniti fugiat ratione ut. Architecto rerum, libero omnis sint blanditiis earum beatae sequi. Ipsa ratione, ad quo officiis minima ex dolorum itaque. Rem rerum ipsam harum, sunt suscipit ipsum ullam! Ex iste rerum modi qui molestiae hic consequatur at totam dolorem doloribus illum iure, amet a, libero illo deserunt autem enim quia fuga minima. Quas exercitationem, delectus temporibus sunt eos natus beatae amet a dicta accusamus cupiditate non tempore animi. Dolorem sapiente quo excepturi aliquid optio magni vel! Aliquam magni mollitia totam corrupti veniam sunt exercitationem harum? Fugit, aliquid accusantium culpa mollitia eius autem cumque provident sequi officiis, possimus ex voluptatum eum nulla. Soluta perferendis velit ducimus consequuntur, voluptatibus consectetur laudantium? Dicta, quaerat minima asperiores dolorum eos eaque, cumque animi tempore saepe dignissimos ea architecto voluptas tempora. Vero nisi cumque sequi sapiente veritatis natus nobis adipisci labore, consequuntur voluptatem placeat quae cupiditate officia. Illum dolores eum dicta, deserunt eaque consectetur architecto dolorum nam atque id impedit porro placeat, fuga repellendus et. Atque expedita temporibus pariatur veritatis quidem, fugiat dignissimos nesciunt quisquam tenetur voluptates eius voluptatibus doloribus aspernatur similique doloremque repellendus deleniti recusandae eligendi? Error quae rerum voluptas molestiae sequi et. Sed, dignissimos excepturi! Perferendis, magni, distinctio consectetur consequuntur alias velit at natus repudiandae beatae sunt hic tempora, laborum commodi facere libero quidem molestiae placeat! Assumenda iusto nostrum, alias ex dolores impedit temporibus eaque laborum. Ducimus fugit temporibus ad sint nisi, repellendus aut cum asperiores repudiandae enim molestias dolor doloribus repellat laudantium! Quos, a minima pariatur quam explicabo dolore enim sequi voluptate illum! Quae dignissimos quasi, laborum adipisci deserunt eum facilis officia maxime numquam quibusdam ab in totam impedit, neque ipsa illum cupiditate tempore explicabo, ipsam asperiores esse similique. Debitis ipsum reiciendis eius commodi, distinctio nam perferendis qui numquam explicabo. Eum eligendi ipsum, beatae repellendus pariatur quae qui inventore dolorum eveniet eius est modi provident tempore saepe officia dicta molestias similique ea officiis praesentium quia hic assumenda. Ab animi veritatis temporibus fuga ducimus iste, eius maiores sed natus maxime facilis nam ut repellat, tenetur molestiae vero cum. Atque unde voluptas nemo, voluptates saepe fugiat odio error aliquam veritatis est omnis, placeat velit quis ipsa dolorum hic libero debitis accusantium maiores quasi assumenda inventore sapiente facere? Quam, mollitia officiis at asperiores voluptatibus consectetur totam modi ut, natus ullam deleniti dolorum. Autem ipsum vel quos soluta tempora adipisci, perspiciatis molestias quibusdam, ea totam modi labore odio eum accusamus error enim voluptate cumque maxime officia maiores, ut nihil pariatur eaque! Cumque, nostrum! Ut delectus voluptate, doloremque cum hic earum tempora laboriosam dignissimos incidunt ipsa temporibus similique voluptatem consequatur quisquam. Itaque error, debitis doloremque obcaecati magnam quo modi nam quibusdam ab beatae voluptate. Quas nemo ipsum facilis deleniti? Obcaecati reiciendis officia, officiis odit mollitia repellendus repudiandae, quisquam quibusdam explicabo odio, minima similique ut cum harum! Nisi facere, ipsam rerum natus placeat esse reiciendis est corporis assumenda voluptatum.</p>
+    <aside>
+        <div class="bi bi-facebook"></div>
+        <div class="bi bi-instagram"></div>
+        <div class="bi bi-twitter"></div>
+        <div class="bi bi-linkedin"></div>
+        <div class="bi bi-youtube"></div>
+    </aside>
+</body>
+</html>
+
+
+
+
+		Dialog
+=========================
+-it is used to create popup window in page
+-Dialog is by default hidden, you can show by uisng "open" attribute
+
+Syntax:
+-------
+	<dialog open>
+		...Your Content....
+	</dialog>
+
+Ex:
+--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <dialog open>
+        Your Comments
+    </dialog>
+</body>
+</html>
+
+
+
+				Figure with capitalization
+			=================================
+-<figure> is an element used to encapsulate a picture with caption so that it can be Be SEO friendly
+
+Syntax:
+-------
+		<figure>
+			.... your images ...
+			<figcaption> Caption </figcaption>
+		</figure>
+
+Ex:
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        figure{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            padding: 20px;
+        }
+        figure div{
+            width: 100px;
+            height: 100px;
+            border:1px dotted green;
+        }
+    </style>
+</head>
+<body>
+    <figure>
+        <div>Your Image</div>
+        <figcaption>Fig: Poco M2rpo mobile</figcaption>
+    </figure>
+</body>
+</html>
+
+
+
+
+		Nav with Menu
+	====================
+-The navigation is defined in page by uisng <nav> element
+-if navigation comprises of various categories then better use <menu>
+
+Syntax:
+-------
+	<nav>
+		<menu>
+
+		</menu>
+	</nav>
+
+
+			Details and Summary
+		=========================
+-Details and summary is used to create expandable and collapsable content in page
+Syntax:
+------
+	<details>
+		<summary>Title</summary>
+		..
+		...
+	</details>
+
+-Details is by default in collapsed state, you can use "open" attribute to expand
+
+
+Ex
+--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            width: fit-content;
+            padding: 20px;
+            border: 1px solid gray;
+            height: 300px;
+            overflow: auto;
+        }
+        nav div{
+            width: 100px;
+            padding: 4px;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            margin-top: 5px;
+        }
+        menu{
+            margin-left: -30px;
+        }
+        menu div:hover{
+            background-color: yellow;
+            color: black;
+            cursor: grab;
+            font-size: 16px;
+            transition:0.50s;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>Home</div>
+        <menu>
+            <details>
+                <summary>Electronics</summary>
+                <div>Television</div>
+                <div>Mobiles</div>
+                <div>Watches</div>
+            </details>
+            <details open>
+                <summary>FootWare</summary>
+                <div>Casuals</div>
+                <div>Sneakers</div>
+                <div>Boots</div>
+            </details>
+            <details>
+                <summary>Fashion</summary>
+                <div>Kids</div>
+                <div>Men</div>
+                <div>Women</div>
+            </details>
+        </menu>
+    </nav>
+</body>
+</html>
+
+
+
+
+Example:
+--------
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        nav div {
+            background-color: black;
+            color: white;
+            padding: 5px;
+            border-radius: 50px;
+            width: 18px;
+            transition: 2s;
+            font-size: 16px;
+        }
+
+        .icon+span {
+            display: none;
+        }
+        .icon:hover+span{
+            display: block;
+            transition: 2s;
+        }
+        nav div:hover{
+            font-size: 18px;
+            transition: 2s;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="icon">
+            <span class="bi bi-house"></span>
+        </div>
+        <span class="title">House</span>
+        <div class="icon">
+            <span class="bi bi-calendar-date-fill"></span>
+        </div>
+        <span class="title">Appointment</span>
+        <div class="icon">
+            <span class="bi bi-person-fill"></span>
+        </div>
+        <span class="title">Signin</span>
+        <div class="icon">
+            <span class="bi bi-cart4"></span>
+        </div>
+        <span class="title">Cart</span>
+    </nav>
+</body>
+
+</html>
+
+
+
+
+FAQ: What is ".hover"?
+Ans: it is a CSS class that defines effects when mouse pointer is over the element.
+
+FAQ: What is ".active"?
+Ans: it is a CSS class that defines effect when you hold down mouse button element
+
+
+
+Example:
+--------
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .title{
+            display: none;
+        }
+        nav div:haover .title{
+            display: inline;
+            color: green;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+       <div>
+        <span class="bi bi-house-fill"></span>
+        <span class="title">House</span>
+       </div>
+       <div>
+        <span class="bi bi-person-fill"></span>
+        <span class="title">Signin</span>
+       </div>
+    </nav>
+</body>
+
+</html>
+
+
+
+
+Body Semantics for Layout
+1.header
+2.footer
+3.section
+4.main
+5.artical
+6.aside
+7.figure
+8.figcaption
+9.div
+10.nav
+11.span
+12.dialog
+13.menu
+14.details
+15.summary
